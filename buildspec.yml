@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - ECR_REPO="703671904406.dkr.ecr.us-east-2.amazonaws.com/demo"
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin $ECR_REPO
       # - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)  # Optional: tag with short git commit hash
