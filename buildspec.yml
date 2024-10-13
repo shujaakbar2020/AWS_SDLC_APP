@@ -20,6 +20,6 @@ phases:
       - docker push $ECR_REPO:latest
       - docker push $ECR_REPO:$IMAGE_TAG
       - echo Build completed on `date`
-      - printf '[{"name":"demo2","imageUri":"%s"}]' $ECR_REPO:latest > imagedefinitions.json
+      - printf '[{"name":"demo","imageUri":"%s"}]' $ECR_REPO:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
