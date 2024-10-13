@@ -1,1 +1,1 @@
-AWS SDLC Automation 1
+AWS SDLC Automation
